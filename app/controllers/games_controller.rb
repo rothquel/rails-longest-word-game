@@ -13,7 +13,8 @@ class GamesController < ApplicationController
     data_serialized = URI.open(url).read
     data = JSON.parse(data_serialized)
     if data["found"] == true
-      return "Congratulations! This word is in the dictionary!"
+      return "Congratulations! This word is in the dictionary!\n\n
+      You score #{response.length} points!"
     else
       return "Oh no - this word is not in the dictionary."
     end
@@ -30,7 +31,6 @@ class GamesController < ApplicationController
     end
     if in_word == true
       @response = check_word(word)
-      # @response = "this letter is in the word"
     else
       @response = "Your word can not be made out of #{letters}"
     end

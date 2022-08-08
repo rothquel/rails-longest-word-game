@@ -1,7 +1,9 @@
-<h1>Score:</h1>
+<div class="container">
+  <h1 class="text-center py-5">Result:</h1>
 
-<p>You said: <strong>"<%= params[:response] %>"</strong></p>
+  <p class="text-center">You said: <strong>"<%= params[:response] %>"</strong></p>
 
-<p> <%= @response %> </p>
+  <p class="text-center"> <%= @response %> </p>
 
-<p><%= link_to 'Try again', new_path %></p>
+  <p class="text-center"><%= link_to 'Try again', new_path %></p>
+</div>
